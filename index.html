@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin:0;
+  font-family: sans-serif;
+  color:white;
+  text-align:center;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+/* VIDEO */
+#bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* CARD */
+.card {
+  background: rgba(0,0,0,0.6);
+  padding:20px;
+  border-radius:20px;
+}
+
+/* BUTTON */
+button {
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  margin:5px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+</style>
+</head>
+
+<body>
+<!-- VIDEO -->
+<video autoplay muted loop id="bgvideo">
+  <source src="VIDEO_LINK.mp4" type="video/mp4">
+</video>
+
+<!-- AUDIO -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 1-SAHIFA -->
+<section>
+  <h1>💍 Ali & Laylo 💍</h1>
+  <h1>25-aprel 2026</h1>
+  <h1>Sho'rchi tumani</h1>
+</section>
+
+<!-- 2-SAHIFA (KALENDAR) -->
+<section> 
+  <h2>📅 To‘y kuni</h2>  
+  <h2>25</h2>
+  <h2>Aprel</h2>
+</section>
+
+<!-- 3-SAHIFA (XARITA) -->
+<section> 
+  <h2>📍 Manzil: Sho'rchi tumani Ideal SS to'yxonasi</h2>
+  <img src="RASM.jpg" width="300">
+  <iframe 
+    src="YOUR_EMBED_MAP_LINK" 
+    width="300" height="200"></iframe>
+</section>
+
+<!-- 5-SAHIFA -->
+<section>
+  <h2>Ikki daryo tutashsa - ummon boʻladi, ikki qalb birlashsa jahon boʻladi.
+    Bizning kichik jahonimiz poydevori qoʻyilayotgan kunda mehmonimiz boʻling</h2>
+  <img src="RASMLINK.jpg" width="300">
+</section>
+
+<!-- 4-SAHIFA -->
+<section>
+  <h2>Sizni kutamiz!</h2>
+  <button onclick="alert('Kelaman')">✅ Kelaman</button>
+</section>
+
+</body>
+</html>
