@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Taklifnoma</title>
 
 <style>
 body {
@@ -15,6 +16,10 @@ body {
 section {
   width: 100%;
   height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
 /* VIDEO */
@@ -28,26 +33,13 @@ section {
   z-index: -1;
 }
 
-/* CARD */
-.card {
-  background: rgba(0,0,0,0.6);
-  padding:20px;
-  border-radius:20px;
-}
-
 /* BUTTON */
 button {
   padding:10px 20px;
   border:none;
   border-radius:10px;
   margin:5px;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -59,9 +51,30 @@ html, body {
 </video>
 
 <!-- AUDIO -->
-<audio autoplay loop>
+<audio id="mymusic" loop>
   <source src="music.mp3" type="audio/mpeg">
+  Sizning brauzeringiz audio tagini qo‘llab-quvvatlamaydi.
 </audio>
+
+<!-- Foydalanuvchi interaktsiyasi bo'lmasa, desktopda avtomatik urinish -->
+<script>
+  const audio = document.getElementById('mymusic');
+
+  // Sahifa yuklanganda urinish
+  window.addEventListener('load', () => {
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.log('Autoplay audio bloklandi, foydalanuvchi bosishi kerak');
+      });
+    }
+  });
+
+  // Sahifada biror tugmani bosganda, audio ishga tushadi
+  document.body.addEventListener('click', () => {
+    audio.play();
+  });
+</script>
 
 <!-- 1-SAHIFA -->
 <section>
